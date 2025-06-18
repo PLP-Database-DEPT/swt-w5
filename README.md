@@ -30,6 +30,8 @@ You'll be testing a JavaScript word puzzle game with these features:
 
 ## 📋 Test Planning Task
 
+* Collaborate in groups of 3 to identify and document bugs via GitHub Issues.
+
 Create a `Test_Plan.md` file with the following sections:
 
 ### 1. Test Objectives
