@@ -18,8 +18,8 @@ Verify that:
 | **In Scope**               | **Out of Scope**          |  
 |----------------------------|---------------------------|  
 | Core game logic            | Browser compatibility     |  
-| JSON word bank validation  | Mobile responsiveness     |  
-| Scoring calculations       | UI styling issues         |  
+|                            |                           |  
+|                            |                           |  
 ```
 
 ### 1.3 Resources  
@@ -32,11 +32,11 @@ Verify that:
 ### 1.4 Schedule  
 ```markdown
 | Phase              | Time (mins) | Start/End Time |  
-|--------------------|------------|----------------|  
-| Test Planning      | 45         | 09:00-09:45    |  
-| Risk Analysis      | 30         | 09:45-10:15    |  
-| Test Execution     | 30         | 10:15-10:45    |  
-| Defect Reporting   | 15         | 10:45-11:00    |  
+|--------------------|------------|-----------------|  
+| Test Planning      | 45         | 09:00-09:45     |  
+| Risk Analysis      |            |                 |  
+| Test Execution     |            |                 |  
+| Defect Reporting   |            |                 |  
 ```
 
 ### 1.5 Entry/Exit Criteria  
@@ -44,7 +44,7 @@ Verify that:
 | **Phase**         | **Entry Criteria**               | **Exit Criteria**                     |  
 |-------------------|----------------------------------|---------------------------------------|  
 | Functional Testing| Game loads in Chrome             | All critical test cases passed        |  
-| Risk Testing      | Risk analysis completed          | High-priority risks mitigated         |  
+|                   |                                  |                                       |  
 ```
 
 ---
@@ -54,17 +54,17 @@ Verify that:
 ### 2.1 Risk Matrix  
 ```markdown
 | ID  | Feature        | Risk                          | Likelihood | Impact | Priority | Mitigation Strategy          |  
-|-----|---------------|-------------------------------|------------|--------|----------|------------------------------|  
-| R1  | Scoring       | Incorrect point calculation   | Medium     | High   | Critical | Boundary value testing       |  
-| R2  | Word Bank     | Empty array crashes game      | Low        | High   | High     | Null check before processing |  
+|-----|----------------|-------------------------------|------------|--------|----------|------------------------------|  
+| R1  | Scoring        | Incorrect point calculation   | Medium     | High   | Critical | Boundary value testing       |  
+|     |                |                               |            |        |          |                              | 
 ```
 
 ### 2.2 Risk Coverage  
 ```mermaid  
 pie  
     title Risk Coverage  
-    "Covered by Tests" : 80  
-    "Uncovered Risks" : 20  
+    "Covered by Tests" :50   
+    "Uncovered Risks" :50   
 ```  
 
 ---
@@ -79,14 +79,6 @@ pie
   1. Solve puzzle without hint → Score = 10  
   2. Solve identical puzzle with hint  
 - **Expected**: Second score = 8  
-- **Actual**: [Your Observation]  
-- **Status**: Pass/Fail  
-```
-
-#### **TC-02: Word Scramble Validation**  
-```markdown
-- **Steps**: Run `scrambleWord()` 100x with "javascript"  
-- **Expected**: Never matches original  
 - **Actual**: [Your Observation]  
 - **Status**: Pass/Fail  
 ```
@@ -111,7 +103,7 @@ pie
 | ID  | Defect Type          | Test Case Affected | Status   |  
 |-----|----------------------|--------------------|----------|  
 | 1   | Logic Error          | TC-01              | Open     |  
-| 2   | Validation Error     | TC-03              | Resolved |  
+| 2   |                      |                    |          |  
 ```
 
 ---
@@ -120,22 +112,20 @@ pie
 
 ### 5.1 Test Approach Changes  
 ```markdown
-- Shifted focus to scoring system after risk analysis revealed 60% of high-priority risks were score-related  
-- Reduced UI tests from 5 to 2 cases to allocate more time for boundary testing  
+  
 ```
 
 ### 5.2 Coverage vs Time Trade-offs  
 ```markdown
 | **Decision**                     | **Rationale**                          |  
 |----------------------------------|----------------------------------------|  
-| Skipped cross-browser testing    | Limited time, Chrome covered 80% users|  
-| Reduced negative test cases      | Prioritized high-risk scenarios first  |  
+| Skipped cross-browser testing    | Limited time, Chrome covered 80% users |  
+|                                  |                                        |  
 ```
 
 ### 5.3 Lessons Learned  
 ```markdown
-- Risk-based testing revealed critical issues early  
-- JSON validation needed more attention than initially planned  
+ 
 ```
 
 ---
@@ -145,15 +135,15 @@ pie
 ```mermaid  
 pie  
     title Test Results  
-    "Passed" : 85  
-    "Failed" : 10  
-    "Blocked" : 5  
+    "Passed" : 1  
+    "Failed" :  1 
+    "Blocked" : 1  
 ```  
 
 ```markdown
-**Total Test Cases**: 10  
-**Execution Time**: 45 mins  
-**Defect Density**: 0.2 defects/test case  
+**Total Test Cases**: 
+**Execution Time**:   
+**Defect Density**:  
 ```
 
 ---
