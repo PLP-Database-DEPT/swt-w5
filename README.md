@@ -1,179 +1,154 @@
-# 📝 Assignment 5: Test Management for Word Puzzle Game
+# 🧩 Assignment 5: Group Test Management — *Word Puzzle Game Plus*
 
 ## 🎯 Learning Objectives
 
-* Understand the components of a test plan (objectives, scope, resources, schedule)
-* Apply entry and exit criteria to a testing process
-* Perform risk analysis to prioritize test cases
-* Practice test monitoring and control techniques
-* Implement risk-based testing strategies
+By the end of this assignment, you will be able to:
+
+- Develop and manage a **test plan** for a real web-based system.  
+- Apply **risk-based testing** and **test prioritization** techniques.  
+- Define and evaluate **entry and exit criteria**.  
+- Perform **test monitoring and control** using metrics and GitHub issues.  
+- Collaborate effectively in a **QA team environment**.
 
 ---
 
-## 🕹️ Project Overview: Word Puzzle Game
+## 👥 Group Configuration
 
-You'll be testing a JavaScript word puzzle game with these features:
+Work in **teams of exactly 3 members**.
 
-* Word scrambling logic
-* Hint system
-* Scoring mechanism
-* Responsive UI
-* JSON word bank
+| Role | Responsibilities |
+|------|------------------|
+| **Test Manager** | Draft the test plan, schedule activities, and track metrics. |
+| **Risk Analyst** | Identify, assess, and prioritize risks. Design high-risk test cases. |
+| **Test Executor** | Execute test cases, capture defects, and validate fixes. |
 
-### Key Components
+> ⚠️ **Important Group Rule:**  
+> Each student must belong to **only one group**.  
+> You **may not** appear in two different groups or submit under multiple teams.  
+> Duplicate participation or shared submissions will be treated as **academic misconduct**.
 
-* Core game logic (`<script>` tag in HTML)
-* Word database (JSON format)
-* User interface (HTML/CSS)
-
----
-
-## 📋 Test Planning Task
-
-* Collaborate in groups of 3 to identify and document bugs via GitHub Issues.
-
-Create a `Test_Plan.md` file with the following sections:
-
-### 1. Test Objectives
-
-> What critical functionality must be verified?
-> *Example*: "Ensure word scrambling algorithm never reveals original word"
-
-### 2. Scope
-
-> What's included/excluded from testing?
-> *Example*:
->
-> * In scope: Game logic, scoring system
-> * Out of scope: Browser compatibility
-
-### 3. Resources
-
-* **Team roles**: 1 tester
-* **Tools**: Browser DevTools, JS console
-* **Environment**: Chrome browser
-
-### 4. Schedule
-
-| Phase          | Time Estimate |
-| -------------- | ------------- |
-| Test Planning  |               |
-| Test Design    |               |
-| Test Execution |               |
-| Reporting      |               |
-
-### 5. Entry/Exit Criteria
-
-* **Entry**: Game is functional on Chrome
-* **Exit**: All critical bugs fixed, 90% test cases passed
+> 💡 Collaboration via **GitHub Projects / Issues** is mandatory.  
+> Each issue must include a severity level, risk mapping, and evidence (e.g., screenshot).
 
 ---
 
-## ⚠️ Risk Analysis Task
+## 🕹️ System Under Test: *Word Puzzle Game Plus*
 
-Create a `Risk_Analysis.md` file with:
+An upgraded browser-based word puzzle game that challenges players to guess scrambled words.
 
-### Risk Assessment Table
+### 🔧 New Features (Intermediate Scope)
 
-| Feature        | Risk                        | Likelihood | Impact | Priority |
-| -------------- | --------------------------- | ---------- | ------ | -------- |
-| Scoring System | Incorrect point calculation | Medium     | High   | Critical |
-| Word Bank      | Missing words cause errors  | Low        | Medium | Medium   |
-| Hint System    | Hint reveals solution       | High       | Medium | High     |
+| Feature | Description | Test Focus |
+|----------|--------------|-------------|
+| **Reset Game** | Resets score and progress instantly | State management, data integrity |
+| **Leaderboard** | Stores top 3 scores in `localStorage` | Persistence, boundary values |
+| **Bonus Round** | Every 3 puzzles → score × 2 | Logic, arithmetic, event sequencing |
 
-### Risk Mitigation Strategies
-
-> *Example*: For scoring risks: Implement boundary value testing
+These additions increase testing complexity across functional, UI, and risk dimensions.
 
 ---
 
-## 🧪 Test Design & Execution
+## 📋 Deliverables
 
-### 1. Risk-Based Test Cases
+All teams submit **one combined report** named `Group_Test_Management_Report.md`.
 
-Design 5 test cases prioritizing high-risk areas. Use this format:
+### 1️⃣ Test Plan
+Include:
+- Objectives  
+- Scope (in/out)  
+- Resources (roles + tools)  
+- Schedule (phase timeline)  
+- Entry / Exit criteria  
+- Environment (Chrome recommended)
+
+### 2️⃣ Risk Analysis
+- Identify at least **6 risks** (functional + non-functional).  
+- Rate each by **Likelihood × Impact** → Priority.  
+- Define **Mitigation / Contingency** actions.  
+- Add a **risk-coverage pie chart**.
+
+### 3️⃣ Test Design & Execution
+- Minimum **8 test cases** (≥ 5 risk-based).  
+- Include **2 negative** and **1 usability** test.  
+- Use this format:
 
 ```
-**ID**: TC-01  
-**Feature**: Scoring System  
-**Test**: Verify score deduction when using hint  
-**Steps**:  
-1. Solve puzzle without hint  
-2. Note score  
-3. Solve identical puzzle with hint  
+ID: TC-03
+Feature: Leaderboard
+Objective: Verify top-3 sorting logic
+Steps:
 
-**Expected**: Hint reduces score by 2 points  
-**Risk Priority**: High  
+Achieve scores 5, 12, 8 → check order
+Expected: Scores sorted descending
+Risk Priority: High
 ```
 
-### 2. Exploratory Testing
 
-While executing your test cases:
+### 4️⃣ Defect Reporting
+- Log at least **3 defects** on GitHub Issues.  
+- Each issue must specify:
+  - **Title**
+  - **Steps to Reproduce**
+  - **Expected / Actual**
+  - **Severity**
+  - **Risk Impact ID**
+  - **Screenshot or evidence**
 
-* Monitor console for errors
-* Control test execution with DevTools
+### 5️⃣ Test Monitoring & Metrics
+Track and visualize:
+- Test Case Pass %  
+- Defect Density (defects / test cases)  
+- Risk Coverage Ratio  
+- Regression Success Rate
 
-### 3. Defect Reporting
+Represent these via tables or simple charts.
 
-Log **2 bugs** in GitHub Issues using this format:
-
-```
-**Title**: Score not reset after new game  
-**Steps**:  
-1. Solve puzzle (score = 10)  
-2. Click "New Puzzle"  
-3. Solve next puzzle  
-
-**Expected**: Score starts from 0  
-**Actual**: Score accumulates continuously  
-**Severity**: Medium  
-**Risk Impact**: High (affects game fairness)  
-```
+### 6️⃣ Reflection
+Discuss briefly:
+- How risk analysis shaped your testing focus.  
+- Trade-offs between coverage, time, and depth.  
+- How collaboration improved (or hindered) test effectiveness.
 
 ---
 
-## 📤 Submission Instructions
+## 📊 Suggested Metrics Reference
 
-Push the following to your GitHub repository:
+| Metric | Formula | Example |
+|---------|----------|----------|
+| **Defect Density** | Defects / Test Cases |  5 / 25 = 0.2 |
+| **Risk Coverage** | (Tested Risks / Total Risks) × 100 |  5 / 6 = 83 % |
+| **Pass Rate** | (Passed / Total) × 100 |  18 / 20 = 90 % |
 
-### 📜 Submission Checklist
+---
 
-- ✅ Complete **test plan**
-- ✅ **Risk analysis** with mitigation strategies
-- ✅ **5 risk-based test cases**
-- ✅ Links to **2 GitHub issues**
-- ✅ **Reflection** on the process
+## 📎 Submission Checklist
 
-### 📁 File to Submit
+✅ `Group_Test_Management_Report.md` (single file)  
+✅ 3 GitHub issues (defects) linked  
+✅ Screenshots / logs (optional)  
+✅ Each member’s **name and role clearly stated**  
+✅ One submission per group — **do not appear in multiple groups**  
 
-- `Test_Report.md` (Include all the above content in this single markdown file)
-
-### ## Reflection
-
-* How did risk analysis change your test approach?
-* What trade-offs existed between test coverage and time?
+> 📌 Each learner is responsible for their role’s section and must contribute equally.  
+> Multiple submissions from the same student across different groups will be rejected.
 
 ---
 
 ## 🧠 Concept Reinforcement
 
-### Risk-Based Testing Focus
+**Risk-Based Testing Focus**  
+> Prioritize based on *Risk Exposure = Probability × Impact*.
 
-> Prioritize tests based on:
-> **Risk exposure = Probability × Impact**
-
-### Test Monitoring Metrics
-
-* Defect density (bugs/feature)
-* Test case pass percentage
-* Risk coverage ratio
-
-### Entry/Exit Criteria Examples
-
-| Phase          | Entry Criteria      | Exit Criteria           |
-| -------------- | ------------------- | ----------------------- |
-| Unit Testing   | Code compiled       | 100% statements covered |
-| System Testing | Features integrated | <5% critical defects    |
+**Test Monitoring Best Practices**
+- Track defects daily.  
+- Update metrics at each control point.  
+- Use visual indicators (tables / pie charts).
 
 ---
 
+### 🧩 End of Assignment
+
+Remember: Quality is measured not by the number of bugs found,  
+but by how effectively your team planned, prioritized, and controlled the testing process.
+
+Happy Testing 🧪  
