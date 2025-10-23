@@ -1,158 +1,134 @@
-# 🧪 Test Management Report: Word Puzzle Game Draft
-**Student Name**: [Your Name]  
-**Date**: [YYYY-MM-DD]  
+# 🧪 Final Group Test Report Template — Word Puzzle Game Plus
 
----
+**Level:** Intermediate QA | **Week 5:** Test Management
 
-## 📋 **1. Test Plan**  
+**Course:** Software Testing & Quality Assurance  
+**Module:** Test Management (Week 5)  
+**Project Type:** Group Assessment  
+**Submission Date:** 2025-10-28
 
-### 1.1 Objectives  
-Verify that:  
-- [ ] Word scrambling never reveals the original word  
-- [ ] Scoring system applies correct points (10 for direct solve, 5 with hint)  
-- [ ] Hint system properly deducts 2 points  
-- [ ] Game handles empty/malformed input gracefully  
+## Team Information
 
-### 1.2 Scope  
-```markdown
-| **In Scope**               | **Out of Scope**          |  
-|----------------------------|---------------------------|  
-| Core game logic            | Browser compatibility     |  
-|                            |                           |  
-|                            |                           |  
-```
+| Role | Name | Responsibilities |
+|------|------|------------------|
+| Test Manager | | Planning, scheduling, coordination, metric tracking |
+| Risk Analyst | | Risk identification, prioritization, test design linkage |
+| Test Executor | | Execution, evidence capture, defect logging |
 
-### 1.3 Resources  
-```markdown
-- **Tester**: [Your Name]  
-- **Tools**: Chrome DevTools, JavaScript Console  
-- **Test Data**: 10-word JSON bank  
-```
+## Group Rules
 
-### 1.4 Schedule  
-```markdown
-| Phase              | Time (mins) | Start/End Time |  
-|--------------------|------------|-----------------|  
-| Test Planning      | 45         | 09:00-09:45     |  
-| Risk Analysis      |            |                 |  
-| Test Execution     |            |                 |  
-| Defect Reporting   |            |                 |  
-```
+- Each student must belong to only one group.
+- Duplicate membership or multiple submissions will result in invalidation.
+- Every group member must contribute towards this project
 
-### 1.5 Entry/Exit Criteria  
-```markdown
-| **Phase**         | **Entry Criteria**               | **Exit Criteria**                     |  
-|-------------------|----------------------------------|---------------------------------------|  
-| Functional Testing| Game loads in Chrome             | All critical test cases passed        |  
-|                   |                                  |                                       |  
-```
+## Project Overview
 
----
+**System Under Test:** Word Puzzle Game Plus  
+**Technology Stack:** HTML, CSS, JavaScript  
+**Environment:** Chrome Browser (Desktop)
 
-## ⚠️ **2. Risk Analysis**  
+### Features Under Test
 
-### 2.1 Risk Matrix  
-```markdown
-| ID  | Feature        | Risk                          | Likelihood | Impact | Priority | Mitigation Strategy          |  
-|-----|----------------|-------------------------------|------------|--------|----------|------------------------------|  
-| R1  | Scoring        | Incorrect point calculation   | Medium     | High   | Critical | Boundary value testing       |  
-|     |                |                               |            |        |          |                              | 
-```
+| Feature | Description | Risk Category |
+|---------|-------------|---------------|
+| Reset Game | Clears score and progress instantly | |
+| Leaderboard | Stores top 3 scores in localStorage | |
+| Bonus Round | Every 3 puzzles → doubles score | |
 
-### 2.2 Risk Coverage  
-```mermaid  
-pie  
-    title Risk Coverage  
-    "Covered by Tests" :50   
-    "Uncovered Risks" :50   
-```  
+## Test Plan
 
----
+### Objectives
 
-## 🧪 **3. Test Cases**  
+- 
 
-### 3.1 High-Priority Tests (Risk-Based)  
+### Scope
 
-#### **TC-01: Hint Point Deduction**  
-```markdown
-- **Steps**:  
-  1. Solve puzzle without hint → Score = 10  
-  2. Solve identical puzzle with hint  
-- **Expected**: Second score = 8  
-- **Actual**: [Your Observation]  
-- **Status**: Pass/Fail  
-```
+**In Scope:**
+- 
 
----
+**Out of Scope:**
+- 
 
-## 🐞 **4. Defect Reports**  
+### Tools & Resources
 
-### 4.1 GitHub Issue Links  
-```markdown
-1. [#1: Score Accumulation Bug](https://github.com/your-repo/issues/1)  
-   - **Severity**: High  
-   - **Risk Impact**: R1 (Scoring system)  
+- 
 
-2. [#2: Empty Input Accepted](https://github.com/your-repo/issues/2)  
-   - **Severity**: Medium  
-   - **Risk Impact**: R2 (Input validation)  
-```
+### Schedule
 
-### 4.2 Defect Summary  
-```markdown
-| ID  | Defect Type          | Test Case Affected | Status   |  
-|-----|----------------------|--------------------|----------|  
-| 1   | Logic Error          | TC-01              | Open     |  
-| 2   |                      |                    |          |  
-```
+| Phase | Planned Duration | Actual Duration | Status |
+|-------|------------------|-----------------|--------|
+| | | | |
 
----
+## Risk Analysis
 
-## 💭 **5. Reflection**  
+### Risks
 
-### 5.1 Test Approach Changes  
-```markdown
-  
-```
+| ID | Feature | Risk Description | Likelihood | Impact | Priority | Mitigation Strategy |
+|----|---------|------------------|------------|--------|----------|---------------------|
+| | | | | | | |
 
-### 5.2 Coverage vs Time Trade-offs  
-```markdown
-| **Decision**                     | **Rationale**                          |  
-|----------------------------------|----------------------------------------|  
-| Skipped cross-browser testing    | Limited time, Chrome covered 80% users |  
-|                                  |                                        |  
-```
+### Risk Coverage
 
-### 5.3 Lessons Learned  
-```markdown
- 
-```
+- Tested Risks Percent: 
+- Untested Risks Percent: 
 
----
+## Test Cases
 
-## 📌 **6. Final Metrics**  
+| ID | Feature | Objective | Expected Result | Actual Result | Status | Risk Link |
+|----|---------|-----------|----------------|---------------|--------|-----------|
+| | | | | | | |
 
-```mermaid  
-pie  
-    title Test Results  
-    "Passed" : 1  
-    "Failed" :  1 
-    "Blocked" : 1  
-```  
+## Defects
 
-```markdown
-**Total Test Cases**: 
-**Execution Time**:   
-**Defect Density**:  
-```
+| ID | Issue Title | Severity | Risk ID | Status | GitHub Link |
+|----|-------------|----------|---------|--------|-------------|
+| | | | | | |
 
----
+## Metrics
 
-## 📎 **7. Attachments**  
-```markdown
-1. [Screenshot of DevTools Console](console_errors.png)  
-2. [Test Data Snapshot](test_data.json)  
+- Test Case Pass Percent: 
+- Defect Density: 
+- Risk Coverage Percent: 
+- Regression Success Rate: 
 
-**Submitted by**: [Your Name]  
-**Submission Date**: [YYYY-MM-DD]  
-```
+### Defect Summary
+
+- Total Defects Logged: 
+- Critical High: 
+- Fix Rate: 
+
+## Test Control & Project Management
+
+### Phases
+
+| Phase | Deliverable | Actual Output | Variance | Owner |
+|-------|-------------|---------------|----------|-------|
+| | | | | |
+
+**Progress Tracking Method:**  
+**Change Control Notes:**
+
+## Lessons Learned
+
+- Most Defect Prone Feature: 
+- Risk Analysis Impact: 
+- Team Communication Effectiveness: 
+- Improvements for Next Cycle: 
+
+## Attachments
+
+- 
+
+## Sign Off
+
+| Name | Role | Initials | Date |
+|------|------|-----------|------|
+| | Test Manager | | |
+| | Risk Analyst | | |
+| | Test Executor | | |
+
+## Overall Summary
+
+**Statement:** 
+
+**Test Status:** ☐ Completed / ☐ In Progress / ☐ Deferred
